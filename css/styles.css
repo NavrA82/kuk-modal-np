@@ -1,0 +1,364 @@
+/* ---------------GENERAL SETTINGS-------------------- */
+:root {
+  /* -----text color---- */
+  --first-text-color: #434455;
+  --second-text-color: #ffffff;
+  --third-text-color: #2e2f42;
+  --fourth-text-color: #4d5ae5;
+  --fifth-text-color: #f4f4fd;
+  --sixth-text-color: #e7e9fc;
+  /* -----background color----------*/
+  --first-background-color: #2e2f42;
+  --second-background-color: #f4f4fd;
+  --third-background-color: #4d5ae5;
+  --fourth-background-color: #ffffff;
+  /* -------accent-color ----------*/
+  --accent-color: #404bbf;
+  /* ---------border color--------- */
+  --border-color-img-portfolio: #e7e9fc;
+  /* --------- found -------------- */
+  --secondary-found: 'Raleway', sans-serif;
+  /* -----settings padding, margin and gap*/
+  --basic-settings-padding-section: 120px;
+  --secondary-settings-padding-section: 96px;
+  --basic-settings-gap: 24px;
+  --basic-settings-margin: 72px;
+  --secondary-settings-margin: 8px;
+  /* -------border radius-------------- */
+  --basic-border-radius: 4px;
+  /* ---------- transition ------------- */
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #2e2f42;
+}
+
+/* margin and padding OFF */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------UNIVERSAL CLASSES--------------------- */
+/* delete marker */
+.list {
+  list-style: none;
+}
+/* delete underline */
+.link {
+  text-decoration: none;
+}
+/* main title attributes */
+.title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+/* main subtitle attributes */
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+/* main description attributes */
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--first-text-color);
+}
+/* fading title effect */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* universal button */
+.btn {
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  letter-spacing: 0.04em;
+  border-radius: var(--basic-border-radius);
+  transition: background-color var(--transition-duration),
+    color var(--transition-duration), border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+/* hover and focus effect button*/
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-color);
+  color: var(--second-text-color);
+  border-color: var(--accent-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* -------------------- modal window and backdrop ----------------- */
+.novaposhta-modal-window-backdrop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.7);
+  transition: opacity var(--transition-duration),
+    visibility var(--transition-duration);
+}
+.novaposhta-modal-window {
+  position: absolute;
+  z-index: 11;
+  left: 50%;
+  top: 12px;
+  transform: translate(-50%, 0);
+  min-width: 968px;
+
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 72px 24px 24px 24px;
+  margin: 0;
+}
+.novaposhta-modal-form-wrapper {
+  display: flex;
+  column-gap: 4px;
+}
+.novaposhta-modal-form-general-wrapper {
+  width: 50%;
+}
+
+.burger-switch-input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  border-radius: 35px;
+}
+.burger-switch-input:checked + .burger-switch-slider {
+  background-color: var(--accent-color);
+}
+.burger-switch-input:focus + .burger-switch-slider {
+  box-shadow: 0 0 1px rgb(177, 177, 174);
+}
+.burger-switch-input:checked + .burger-switch-slider::before {
+  transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+}
+.switch-slider::before,
+.burger-switch-slider::before {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  right: 0.6px;
+  left: 0.6px;
+  bottom: 0.6px;
+  height: 18.8px;
+  width: 18.8px;
+  border-radius: 50%;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 7px 5px 15px 0px rgba(160, 158, 160, 0.4);
+  transition: 0.4s;
+}
+.burger-switch-slider-name {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.burger-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 46px;
+  height: 20px;
+  border-radius: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* винести в змінну */
+  background-color: #cecdcd;
+  transition: 0.4s;
+}
+.burger-switch {
+  display: block;
+  padding-top: -25px;
+  position: relative;
+  width: 46px;
+  height: 20px;
+}
+.burger-switch-input:focus + .burger-switch-slider {
+  box-shadow: 0 0 1px rgb(177, 177, 174);
+}
+.burger-switch-input:checked + .burger-switch-slider {
+  background-color: var(--third-background-color);
+}
+.novaposhta-modal-switch {
+  margin-top: 4px;
+  display: flex;
+}
+.novaposhta-modal-form-recipient {
+  width: 80%;
+  margin: 0 auto;
+
+  row-gap: 4px;
+}
+.novaposhta-modal-shipment-parameters-general,
+.novaposhta-modal-shipment-parameters-wrap {
+  display: flex;
+  column-gap: 4px;
+}
+.novaposhta-modal-shipment-parameters-general-sender {
+}
+.novaposhta-modal-shipment-parameters {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.novaposhta-modal-form-label-value {
+  display: flex;
+  align-items: flex-end;
+}
+.novaposhta-modal-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+  margin: 0;
+}
+.novaposhta-modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.novaposhta-modal-form-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--secondary-settings-margin);
+}
+.novaposhta-modal-form-label-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  transition: border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+.novaposhta-modal-form-label-input,
+.novaposhta-modal-form-label-select {
+  outline: none;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+}
+.novaposhta-modal-form-label-cost {
+  width: 30%;
+}
+.novaposhta-modal-form-input-icon {
+  margin-top: 4px;
+  position: relative;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.novaposhta-modal-form-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  transition: fill var(--transition-duration), border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+.novaposhta-modal-form-label:hover .novaposhta-modal-form-label-input {
+  color: var(--accent-color);
+}
+.novaposhta-modal-form-input-icon:hover {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+  color: var(--accent-color);
+}
+/* ---------------------- modal window button --------------------------- */
+.novaposhta-btn-wrap {
+  display: flex;
+}
+.novaposhta-modal-btn-submit,
+.novaposhta-modal-btn {
+  display: block;
+  min-width: 178px;
+  padding: 8px 16px;
+  margin: auto;
+  margin-top: 24px;
+  background-color: var(--third-background-color);
+  color: var(--second-text-color);
+  border-radius: var(--basic-border-radius);
+  border: 1px solid var(--third-background-color);
+}
+
+/* ------------------------------ backdrop off ------------------------------- */
+/* .novaposhta-modal-window-backdrop.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+} */
+.novaposhta-modal-window-backdrop {
+  overflow-y: scroll;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+.novaposhta-modal-title {
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* ----------------------- checkbox and checkbox fake ------------- */
+.text-checkbox {
+  font-size: 12px;
+}
+.novaposhta-modal-form-checkbox-accept-link {
+  font-size: 12px;
+}
