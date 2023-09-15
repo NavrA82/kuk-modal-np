@@ -13,7 +13,7 @@
   --third-background-color: #4d5ae5;
   --fourth-background-color: #ffffff;
   /* -------accent-color ----------*/
-  --accent-color: #404bbf;
+  --accent-color: gray;
   /* ---------border color--------- */
   --border-color-img-portfolio: #e7e9fc;
   /* --------- found -------------- */
@@ -105,7 +105,7 @@ ul {
   line-height: 1.5;
   align-items: center;
   letter-spacing: 0.04em;
-  border-radius: var(--basic-border-radius);
+  border-radius: grey;
   transition: background-color var(--transition-duration),
     color var(--transition-duration), border var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -131,6 +131,28 @@ img {
   padding-right: 16px;
 }
 
+input[type='radio'] {
+  /* Некастомний стиль кругового фону */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid gray; /* Колір обводки радіокнопки */
+  /* outline: none; */
+  margin-right: 5px;
+}
+
+/* Задаємо кастомний фон для невибраних радіокнопок */
+input[type='radio']:not(:checked) {
+  background-color: #fff; /* Колір фону для невибраних радіокнопок */
+}
+
+input[type='radio']:checked {
+  background-color: grey;
+  color: #fff; /* Колір тексту для вибраних радіокнопок */
+}
 /* -------------------- modal window and backdrop ----------------- */
 .container {
   max-width: 428px;
@@ -231,7 +253,7 @@ img {
   box-shadow: 0 0 1px rgb(177, 177, 174);
 }
 .burger-switch-input:checked + .burger-switch-slider {
-  background-color: var(--third-background-color);
+  background-color: var(--accent-color);
 }
 .novaposhta-modal-switch {
   margin-top: 4px;
@@ -337,10 +359,9 @@ img {
   padding: 8px 16px;
   margin: auto;
   margin-top: 24px;
-  background-color: var(--third-background-color);
-  color: var(--second-text-color);
+  background-color: #cecdcd;
   border-radius: var(--basic-border-radius);
-  border: 1px solid var(--third-background-color);
+  border: 1px solid #cecdcd;
 }
 
 /* ------------------------------ backdrop off ------------------------------- */
