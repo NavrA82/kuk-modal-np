@@ -248,6 +248,9 @@ ul {
   font-size: 16px;
   line-height: 1.5;
 }
+/* .wrap-button {
+  margin: 0 auto;
+} */
 
 /*!##################### 480px-.... ########################### */
 @media screen and (min-width: 480px) {
@@ -264,8 +267,19 @@ ul {
   .novaposhta-modal-form-recipient {
     width: 80%;
   }
+}
 
-  /* .novaposhta-modal-window {
-    min-width: 968px;
-  } */
+@media screen and (min-width: 1500px) {
+  .novaposhta-modal-form {
+    min-width: 1136px;
+  }
+  .novaposhta-modal-form-recipient {
+    width: 50%;
+  }
+  .wrap-button {
+    margin: 0 auto;
+  }
+  .novaposhta-btn-wrap {
+    column-gap: 300px;
+  }
 }
