@@ -288,11 +288,11 @@ ul {
   column-gap: 12px;
 }
 .novaposhta-modal-form-label-department {
-  width: 70%;
+  width: 60%;
 }
 
 .novaposhta-modal-form-label-locality {
-  width: 30%;
+  width: 40%;
 }
 .novaposhta-modal-form-label-checkbox {
   display: flex;
@@ -306,6 +306,6 @@ ul {
   }
   .novaposhta-modal-form-recipient,
   .wrap-button {
-    width: 52%;
+    width: 60%;
   }
 }
