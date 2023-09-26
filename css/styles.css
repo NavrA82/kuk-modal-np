@@ -51,10 +51,7 @@ ul {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
-  /* margin: 0 auto; */
-}
-.novaposhta-modal-form-wrapper {
+  padding: 24px;
   margin: 0 auto;
 }
 
@@ -132,21 +129,43 @@ ul {
 }
 .novaposhta-modal-form-recipient {
   width: 100%;
-  margin: 0 auto;
 
-  row-gap: 4px;
+  row-gap: 8px;
 }
-.novaposhta-modal-shipment-parameters-general,
-.novaposhta-modal-shipment-parameters-wrap {
+.novaposhta-modal-shipment-parameters-general {
   display: flex;
   column-gap: 4px;
 }
-.novaposhta-modal-shipment-parameters-general-sender {
+.novaposhta-modal-shipment-parameters-wrap {
+  display: flex;
+  border: 1px solid #c8c8c8;
+  flex-direction: column;
+  padding: 8px;
+  row-gap: 8px;
 }
+.novaposhta-modal-shipment-parameters-general-sender {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.distance-between-checkbox {
+  margin-right: 12px;
+}
+.distance-between-checkbox-receiver {
+  margin-right: 52px;
+}
+.novaposhta-modal-form-cub::before {
+  content: '³'; /* Вставляємо символ ступеня */
+  vertical-align: super; /* Позиціонуємо його вгору */
+  /* font-size: 70%; Розмір символу ступеня (можете змінити за потребою) */
+  margin-right: 2px; /* Зсув від літери "м" (можете змінити за потребою) */
+}
+
 .novaposhta-modal-shipment-parameters {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-top: 8px;
 }
 .novaposhta-modal-form-label-value {
   display: flex;
@@ -165,10 +184,17 @@ ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 .novaposhta-modal-form-label {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.novaposhta-modal-form-label-value-weight {
+  padding-top: 8px;
+  padding-right: 8px;
 }
 .novaposhta-modal-form-label-name {
   font-weight: 400;
@@ -224,11 +250,7 @@ ul {
 }
 .novaposhta-modal-btn-submit,
 .novaposhta-modal-btn {
-  /* display: block;
-  min-width: 178px;
-  padding: 8px 16px; */
-  margin: auto;
-  margin-top: 24px;
+  margin-right: auto;
   -moz-border-radius: 2px;
   cursor: pointer;
   height: 25px;
@@ -243,43 +265,35 @@ ul {
   border-radius: var(--basic-border-radius);
   border: 1px solid #cecdcd; */
 }
+.novaposhta-modal-link {
+  border: none;
+  background-color: inherit;
+  text-decoration: underline;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: grey !important;
+}
 
 .novaposhta-modal-title {
   font-size: 16px;
   line-height: 1.5;
 }
-/* .wrap-button {
-  margin: 0 auto;
-} */
-
+.wrap-button {
+  margin-top: 40px;
+}
+.novaposhta-modal-form-wrapper-receiver {
+  display: flex;
+  column-gap: 12px;
+}
 /*!##################### 480px-.... ########################### */
-@media screen and (min-width: 480px) {
-  /* .container {
-    width: 1280px;
-  } */
+@media screen and (min-width: 1280px) {
   .novaposhta-modal-form-wrapper {
     display: flex;
-    column-gap: 4px;
+    column-gap: 48px;
   }
-  .novaposhta-modal-form-general-wrapper {
-    width: 50%;
-  }
-  .novaposhta-modal-form-recipient {
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .novaposhta-modal-form {
-    min-width: 1136px;
-  }
-  .novaposhta-modal-form-recipient {
-    width: 50%;
-  }
+  .novaposhta-modal-form-recipient,
   .wrap-button {
-    margin: 0 auto;
-  }
-  .novaposhta-btn-wrap {
-    column-gap: 300px;
+    width: 52%;
   }
 }

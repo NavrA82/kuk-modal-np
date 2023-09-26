@@ -27,137 +27,194 @@
           <form class="novaposhta-modal-form">
             <div class="novaposhta-modal-form-wrapper">
               <div class="novaposhta-modal-form-general-wrapper">
-                <p class="novaposhta-modal-title">Параметри відправлення</p>
-                <div class="novaposhta-modal-shipment-parameters-general">
-                  <label class="novaposhta-modal-form-label">
-                    <span class="novaposhta-modal-form-label-name"
-                      >Опис відправлення</span
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <p class="novaposhta-modal-title">Параметри відправлення</p>
+                  <div>
+                    <label
+                      style="
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                        gap: 4px;
+                      "
                     >
-                    <span class="novaposhta-modal-form-input-icon">
-                      <select class="novaposhta-modal-form-label-select">
-                        <option value="mobile-accessories">
-                          аксесуари для мобільних телефонів
-                        </option>
-                        <option value="phone">смартфон</option>
-                      </select>
-                    </span>
-                  </label>
-
-                  <label
-                    class="novaposhta-modal-form-label novaposhta-modal-form-label-cost"
-                  >
-                    <span class="novaposhta-modal-form-label-name"
-                      >Оціночна вартість</span
-                    >
-                    <span class="novaposhta-modal-form-input-icon">
                       <input
-                        class="novaposhta-modal-form-label-input"
-                        type="text"
+                        type="radio"
+                        class="novaposhta-modal-form-checkbox"
+                        checked
                       />
-                    </span>
-                  </label>
-                  <span class="novaposhta-modal-form-label-value">грн</span>
+                      <span>Посилки та вантажі</span>
+                    </label>
+                  </div>
+                </div>
+                <div style="display: flex; column-gap: 24px">
+                  <div>
+                    <div class="novaposhta-modal-shipment-parameters-general">
+                      <label class="novaposhta-modal-form-label">
+                        <span class="novaposhta-modal-form-label-name"
+                          >Опис відправлення</span
+                        >
+                        <span class="novaposhta-modal-form-input-icon">
+                          <select class="novaposhta-modal-form-label-select">
+                            <option value="mobile-accessories">
+                              аксесуари для мобільних телефонів
+                            </option>
+                            <option value="phone">смартфон</option>
+                          </select>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="novaposhta-modal-shipment-parameters">
+                      <div class="novaposhta-modal-shipment-parameters-general">
+                        <div style="display: flex">
+                          <label
+                            class="novaposhta-modal-form-label novaposhta-modal-form-label-value-weight"
+                          >
+                            <span class="novaposhta-modal-form-label-name"
+                              >Загальна вага, кг</span
+                            >
+                            <div style="display: flex; column-gap: 4px">
+                              <span class="novaposhta-modal-form-input-icon">
+                                <input
+                                  class="novaposhta-modal-form-label-input"
+                                  type="text"
+                                />
+                              </span>
+                            </div>
+                          </label>
+                        </div>
+
+                        <div class="novaposhta-modal-shipment-parameters-wrap">
+                          <div style="display: flex; column-gap: 16px">
+                            <label class="novaposhta-modal-form-label">
+                              <span class="novaposhta-modal-form-label-name"
+                                >Довжина, см</span
+                              >
+                              <span class="novaposhta-modal-form-input-icon">
+                                <input
+                                  class="novaposhta-modal-form-label-input"
+                                  type="text"
+                                />
+                              </span>
+                            </label>
+
+                            <label class="novaposhta-modal-form-label">
+                              <span class="novaposhta-modal-form-label-name"
+                                >Ширина, см</span
+                              >
+                              <span class="novaposhta-modal-form-input-icon">
+                                <input
+                                  class="novaposhta-modal-form-label-input"
+                                  type="text"
+                                />
+                              </span>
+                            </label>
+
+                            <label class="novaposhta-modal-form-label">
+                              <span class="novaposhta-modal-form-label-name"
+                                >Висота, см</span
+                              >
+                              <span class="novaposhta-modal-form-input-icon">
+                                <input
+                                  class="novaposhta-modal-form-label-input"
+                                  type="text"
+                                />
+                              </span>
+                            </label>
+                          </div>
+
+                          <div
+                            style="
+                              display: flex;
+                              column-gap: 4px;
+                              justify-content: end;
+                            "
+                          >
+                            <span
+                              style="
+                                font-weight: 700;
+                                font-size: 28px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 0 80px;
+                              "
+                              >або</span
+                            >
+                            <div style="display: flex; column-gap: 4px">
+                              <label class="novaposhta-modal-form-label">
+                                <span class="novaposhta-modal-form-label-name"
+                                  >Загальний об'єм, м<span
+                                    class="novaposhta-modal-form-cub"
+                                  ></span
+                                ></span>
+                                <span class="novaposhta-modal-form-input-icon">
+                                  <input
+                                    class="novaposhta-modal-form-label-input"
+                                    type="text"
+                                  />
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    style="
+                      display: flex;
+                      row-gap: 16px;
+                      flex-direction: column;
+                      width: 38%;
+                    "
+                  >
+                    <label class="novaposhta-modal-form-label">
+                      <span class="novaposhta-modal-form-label-name"
+                        >Оціночна вартість, грн</span
+                      >
+                      <span class="novaposhta-modal-form-input-icon">
+                        <input
+                          class="novaposhta-modal-form-label-input"
+                          type="text"
+                        />
+                      </span>
+                    </label>
+
+                    <label class="novaposhta-modal-form-label">
+                      <span class="novaposhta-modal-form-label-name"
+                        >Об'ємна вага</span
+                      >
+                      <span class="novaposhta-modal-form-input-icon">
+                        <input
+                          class="novaposhta-modal-form-label-input"
+                          type="text"
+                        />
+                      </span>
+                    </label>
+
+                    <div style="display: flex; column-gap: 4px">
+                      <label class="novaposhta-modal-form-label">
+                        <span class="novaposhta-modal-form-label-name"
+                          >Кількість місць, шт</span
+                        >
+                        <span class="novaposhta-modal-form-input-icon">
+                          <input
+                            class="novaposhta-modal-form-label-input"
+                            type="text"
+                          />
+                        </span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="novaposhta-modal-shipment-parameters">
-                  <div class="novaposhta-modal-shipment-parameters-wrap">
-                    <label class="novaposhta-modal-form-label">
-                      <span class="novaposhta-modal-form-label-name"
-                        >Загальна вага</span
-                      >
-                      <span class="novaposhta-modal-form-input-icon">
-                        <input
-                          class="novaposhta-modal-form-label-input"
-                          type="text"
-                        />
-                      </span>
-                    </label>
-                    <span class="novaposhta-modal-form-label-value">кг</span>
-
-                    <label class="novaposhta-modal-form-label">
-                      <span class="novaposhta-modal-form-label-name"
-                        >Загальний об'єм</span
-                      >
-                      <span class="novaposhta-modal-form-input-icon">
-                        <input
-                          class="novaposhta-modal-form-label-input"
-                          type="text"
-                        />
-                      </span>
-                    </label>
-                    <span class="novaposhta-modal-form-label-value">м.куб</span>
-
-                    <label class="novaposhta-modal-form-label">
-                      <span class="novaposhta-modal-form-label-name"
-                        >Кількість місць</span
-                      >
-                      <span class="novaposhta-modal-form-input-icon">
-                        <input
-                          class="novaposhta-modal-form-label-input"
-                          type="text"
-                        />
-                      </span>
-                    </label>
-                    <span class="novaposhta-modal-form-label-value">шт</span>
-                  </div>
-                  <span class="novaposhta-modal-form-label-value">АБО</span>
-                  <div class="novaposhta-modal-shipment-parameters-wrap">
-                    <label class="novaposhta-modal-form-label">
-                      <span class="novaposhta-modal-form-label-name"
-                        >Довжина</span
-                      >
-                      <span class="novaposhta-modal-form-input-icon">
-                        <input
-                          class="novaposhta-modal-form-label-input"
-                          type="text"
-                        />
-                      </span>
-                    </label>
-                    <span class="novaposhta-modal-form-label-value">см</span>
-
-                    <label class="novaposhta-modal-form-label">
-                      <span class="novaposhta-modal-form-label-name"
-                        >Ширина</span
-                      >
-                      <span class="novaposhta-modal-form-input-icon">
-                        <input
-                          class="novaposhta-modal-form-label-input"
-                          type="text"
-                        />
-                      </span>
-                    </label>
-                    <span class="novaposhta-modal-form-label-value">см</span>
-
-                    <label class="novaposhta-modal-form-label">
-                      <span class="novaposhta-modal-form-label-name"
-                        >Висота</span
-                      >
-                      <span class="novaposhta-modal-form-input-icon">
-                        <input
-                          class="novaposhta-modal-form-label-input"
-                          type="text"
-                        />
-                      </span>
-                    </label>
-                    <span class="novaposhta-modal-form-label-value">см</span>
-
-                    <label class="novaposhta-modal-form-label">
-                      <span class="novaposhta-modal-form-label-name"
-                        >Загальний об'єм</span
-                      >
-                      <span class="novaposhta-modal-form-input-icon">
-                        <input
-                          class="novaposhta-modal-form-label-input"
-                          type="text"
-                        />
-                      </span>
-                    </label>
-                    <span class="novaposhta-modal-form-label-value">м.куб</span>
-                  </div>
+                <div style="display: flex; gap: 60px; margin-top: 28px">
                   <div>
                     <p class="novaposhta-modal-title">Платник за доставку</p>
                     <div>
-                      <label>
+                      <label class="distance-between-checkbox">
                         <input
                           type="radio"
                           name="who-pays"
@@ -173,6 +230,30 @@
                           class="novaposhta-modal-form-checkbox"
                         />
                         <span>Відправник</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div style="padding-top: 16px">
+                    <span class="novaposhta-modal-form-label-name"
+                      >Форма оплати за доставку</span
+                    >
+                    <div style="margin-top: 12px">
+                      <label class="distance-between-checkbox">
+                        <input
+                          type="radio"
+                          name="what-pays"
+                          checked
+                          class="novaposhta-modal-form-checkbox"
+                        />
+                        <span>Готівка</span>
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="what-pays"
+                          class="novaposhta-modal-form-checkbox"
+                        />
+                        <span>Безготівка</span>
                       </label>
                     </div>
                   </div>
@@ -229,9 +310,9 @@
 
             <div class="novaposhta-modal-form-recipient">
               <div>
-                <div style="margin-top: 8px">
+                <div style="margin-top: 40px">
                   <p class="novaposhta-modal-title">Одержувач</p>
-                  <label>
+                  <label class="distance-between-checkbox">
                     <input
                       type="radio"
                       name="who-recipient"
@@ -249,7 +330,7 @@
                     <span>Юридична особа</span>
                   </label>
                 </div>
-                <div class="novaposhta-modal-form-wrapper">
+                <div class="novaposhta-modal-form-wrapper-receiver">
                   <label class="novaposhta-modal-form-label">
                     <span class="novaposhta-modal-form-label-name"
                       >Телефон</span
@@ -315,8 +396,8 @@
                     </span>
                   </label>
                 </div>
-                <div style="margin-bottom: 8px; margin-top: 8px">
-                  <label>
+                <div style="margin-bottom: 8px; margin-top: 40px">
+                  <label class="distance-between-checkbox-receiver">
                     <input
                       type="radio"
                       name="where-delivery"
@@ -325,7 +406,7 @@
                     />
                     <span>Відділення</span>
                   </label>
-                  <label>
+                  <label class="distance-between-checkbox-receiver">
                     <input
                       type="radio"
                       name="where-delivery"
@@ -333,7 +414,7 @@
                     />
                     <span>Адреса</span>
                   </label>
-                  <label>
+                  <label class="distance-between-checkbox-receiver">
                     <input
                       type="radio"
                       name="where-delivery"
@@ -350,7 +431,7 @@
                     <span>Цифрова адреса</span>
                   </label>
                 </div>
-                <div class="novaposhta-modal-form-wrapper">
+                <div class="novaposhta-modal-form-wrapper-receiver">
                   <label class="novaposhta-modal-form-label">
                     <span class="novaposhta-modal-form-label-name"
                       >Населений пункт</span
@@ -399,11 +480,13 @@
                 </div>
                 <span class="burger-switch-slider-name">Грошовий переказ</span>
               </div>
-              <div style="display: flex; column-gap: 4px">
+              <div style="display: flex; column-gap: 28px">
                 <label
                   class="novaposhta-modal-form-label novaposhta-modal-form-label-cost"
                 >
-                  <span class="novaposhta-modal-form-label-name">Сума</span>
+                  <span class="novaposhta-modal-form-label-name"
+                    >Сума, грн</span
+                  >
                   <span class="novaposhta-modal-form-input-icon">
                     <input
                       class="novaposhta-modal-form-label-input"
@@ -411,13 +494,12 @@
                     />
                   </span>
                 </label>
-                <span class="novaposhta-modal-form-label-value">грн</span>
                 <div style="display: flex; flex-direction: column">
                   <span class="novaposhta-modal-form-label-name"
                     >Платник за доставку</span
                   >
-                  <div style="margin-top: 28px">
-                    <label>
+                  <div>
+                    <label class="distance-between-checkbox">
                       <input
                         type="radio"
                         name="pay-delivery"
@@ -436,6 +518,30 @@
                     </label>
                   </div>
                 </div>
+                <div style="display: flex; flex-direction: column">
+                  <span class="novaposhta-modal-form-label-name"
+                    >Форма отримання</span
+                  >
+                  <div>
+                    <label class="distance-between-checkbox">
+                      <input
+                        type="radio"
+                        name="form-of-payment"
+                        checked
+                        class="novaposhta-modal-form-checkbox"
+                      />
+                      <span>у відділенні</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="form-of-payment"
+                        class="novaposhta-modal-form-checkbox"
+                      />
+                      <span>На карту</span>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -448,12 +554,17 @@
                 >
                   Створити накладну
                 </button>
-                <button type="button" class="novaposhta-modal-btn btn">
-                  Зберегти
-                </button>
-                <button type="button" class="novaposhta-modal-btn btn">
-                  Скасувати
-                </button>
+                <div>
+                  <button
+                    type="button"
+                    class="novaposhta-modal-link distance-between-checkbox-receiver"
+                  >
+                    Зберегти
+                  </button>
+                  <button type="button" class="novaposhta-modal-link">
+                    Скасувати
+                  </button>
+                </div>
               </div>
             </div>
           </form>
