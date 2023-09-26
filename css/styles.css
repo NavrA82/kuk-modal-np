@@ -294,6 +294,10 @@ ul {
 .novaposhta-modal-form-label-locality {
   width: 30%;
 }
+.novaposhta-modal-form-label-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
 /*!##################### 480px-.... ########################### */
 @media screen and (min-width: 1280px) {
   .novaposhta-modal-form-wrapper {
