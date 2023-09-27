@@ -154,10 +154,9 @@ ul {
   margin-right: 52px;
 }
 .novaposhta-modal-form-cub::before {
-  content: '³'; /* Вставляємо символ ступеня */
-  vertical-align: super; /* Позиціонуємо його вгору */
-  /* font-size: 70%; Розмір символу ступеня (можете змінити за потребою) */
-  margin-right: 2px; /* Зсув від літери "м" (можете змінити за потребою) */
+  content: '³';
+  vertical-align: super;
+  margin-right: 2px;
 }
 
 .novaposhta-modal-shipment-parameters {
@@ -277,7 +276,8 @@ ul {
 .novaposhta-modal-link:is(:hover, :focus),
 .novaposhta-modal-btn-submit:is(:hover, :focus) {
   background-color: grey;
-  color: #fff;
+  border-color: #000;
+  color: #000;
 }
 .novaposhta-modal-link {
   border: none;
