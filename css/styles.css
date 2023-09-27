@@ -67,6 +67,9 @@ ul {
 .burger-switch-input:checked + .burger-switch-slider {
   background-color: var(--accent-color);
 }
+select {
+  border-radius: 20px;
+}
 .burger-switch-input:focus + .burger-switch-slider {
   box-shadow: 0 0 1px red;
 }
@@ -212,6 +215,7 @@ ul {
   height: 38px;
   width: 100%;
   text-align: center;
+  border-radius: inherit;
 }
 .novaposhta-modal-form-label-input {
   outline: none;
