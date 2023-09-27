@@ -257,18 +257,18 @@ ul {
 .novaposhta-btn-wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
 }
 .novaposhta-modal-btn-submit {
-  margin-right: 52px;
+  margin-right: auto;
   -moz-border-radius: 2px;
   cursor: pointer;
   height: 50px;
   padding: 12px;
   font-family: Arial;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
-  color: grey;
+  color: #000;
   border: 1px solid;
   border-color: RGB(172, 172, 172);
   background-color: RGB(241, 241, 241);
@@ -277,7 +277,7 @@ ul {
 .novaposhta-modal-btn-submit:is(:hover, :focus) {
   background-color: grey;
   border-color: #000;
-  color: #000;
+  color: #fff;
 }
 .novaposhta-modal-link {
   border: none;
