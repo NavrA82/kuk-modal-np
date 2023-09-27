@@ -228,9 +228,7 @@ ul {
 .novaposhta-modal-form-label-input-pay-color {
   color: red;
 }
-.novaposhta-modal-form-label-cost {
-  width: 30%;
-}
+
 .novaposhta-modal-form-input-icon {
   /* position: relative; */
   border: 1px solid #c8c8c8;
@@ -267,16 +265,19 @@ ul {
   -moz-border-radius: 2px;
   cursor: pointer;
   height: 50px;
+  padding: 12px;
   font-family: Arial;
   font-weight: bold;
   font-size: 24px;
-  color: grey !important;
+  color: grey;
   border: 1px solid;
   border-color: RGB(172, 172, 172);
   background-color: RGB(241, 241, 241);
-  /* background-color: #cecdcd;
-  border-radius: var(--basic-border-radius);
-  border: 1px solid #cecdcd; */
+}
+.novaposhta-modal-link:is(:hover, :focus),
+.novaposhta-modal-btn-submit:is(:hover, :focus) {
+  background-color: grey;
+  color: #fff;
 }
 .novaposhta-modal-link {
   border: none;
