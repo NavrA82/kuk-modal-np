@@ -20,12 +20,12 @@
   <!--***************** /MAIN PAGE  ****************-->
 
   <body>
-    <!-- ================= modal window ============ -->
     <div class="novaposhta-modal-window-backdrop">
       <div class="container">
         <div class="novaposhta-modal-window">
           <form class="novaposhta-modal-form">
             <div class="novaposhta-modal-form-wrapper">
+              <!-- ************************** shipping options****************************** -->
               <div class="novaposhta-modal-form-general-wrapper">
                 <div style="display: flex; align-items: center; gap: 8px">
                   <p class="novaposhta-modal-title">Параметри відправлення</p>
@@ -161,16 +161,13 @@
                       </div>
                     </div>
                   </div>
-
+                  <!-- -------------------- other shipping parameters--------------------------  -->
                   <div
-                    style="
-                      display: flex;
-                      row-gap: 16px;
-                      flex-direction: column;
-                      width: 38%;
-                    "
+                    style="display: flex; row-gap: 16px; flex-direction: column"
                   >
-                    <label class="novaposhta-modal-form-label">
+                    <label
+                      class="novaposhta-modal-form-label novaposhta-modal-form-label-other-parameters"
+                    >
                       <span class="novaposhta-modal-form-label-name"
                         >Оціночна вартість, грн</span
                       >
@@ -182,7 +179,9 @@
                       </span>
                     </label>
 
-                    <label class="novaposhta-modal-form-label">
+                    <label
+                      class="novaposhta-modal-form-label novaposhta-modal-form-label-other-parameters"
+                    >
                       <span class="novaposhta-modal-form-label-name"
                         >Об'ємна вага</span
                       >
@@ -195,7 +194,9 @@
                     </label>
 
                     <div style="display: flex; column-gap: 4px">
-                      <label class="novaposhta-modal-form-label">
+                      <label
+                        class="novaposhta-modal-form-label novaposhta-modal-form-label-other-parameters"
+                      >
                         <span class="novaposhta-modal-form-label-name"
                           >Кількість місць, шт</span
                         >
@@ -209,6 +210,8 @@
                     </div>
                   </div>
                 </div>
+                <!-- -------------------- /other shipping parameters--------------------------  -->
+                <!-- ************************** /shipping options****************************** -->
 
                 <div style="display: flex; gap: 60px; margin-top: 8px">
                   <div>
@@ -493,7 +496,7 @@
                   >
                   <span class="novaposhta-modal-form-input-icon">
                     <input
-                      class="novaposhta-modal-form-label-input"
+                      class="novaposhta-modal-form-label-input novaposhta-modal-form-label-input-pay-color"
                       type="text"
                     />
                   </span>
