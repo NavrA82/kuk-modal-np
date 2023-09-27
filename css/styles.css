@@ -67,9 +67,7 @@ ul {
 .burger-switch-input:checked + .burger-switch-slider {
   background-color: var(--accent-color);
 }
-select {
-  border-radius: 20px;
-}
+
 .burger-switch-input:focus + .burger-switch-slider {
   box-shadow: 0 0 1px red;
 }
@@ -215,8 +213,11 @@ select {
   height: 38px;
   width: 100%;
   text-align: center;
-  border-radius: inherit;
 }
+.novaposhta-modal-form-label-select-option {
+  border-radius: 10px;
+}
+
 .novaposhta-modal-form-label-input {
   outline: none;
   border: none;
@@ -232,7 +233,6 @@ select {
 }
 
 .novaposhta-modal-form-input-icon {
-  /* position: relative; */
   border: 1px solid #c8c8c8;
   transition: border var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -264,7 +264,6 @@ select {
 }
 .novaposhta-modal-btn-submit {
   margin-right: auto;
-  -moz-border-radius: 2px;
   cursor: pointer;
   height: 50px;
   padding: 12px;
