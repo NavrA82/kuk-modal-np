@@ -50,7 +50,7 @@ ul {
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 24px;
+  padding: 0px 8px;
   margin: 0 auto;
 }
 
@@ -174,10 +174,12 @@ ul {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.2;
-
   letter-spacing: 0.02em;
   color: var(--third-text-color);
-  margin: 12px 0;
+  margin: 12px 0 4px 0;
+}
+.novaposhta-modal-subtitle {
+  margin: 12px 0 4px 0;
 }
 .novaposhta-modal-form {
   display: flex;
@@ -295,7 +297,7 @@ ul {
   line-height: 1.5;
 }
 .wrap-button {
-  margin-top: 40px;
+  margin: 12px 0 4px 0;
 }
 .novaposhta-modal-form-wrapper-receiver {
   display: flex;
