@@ -176,11 +176,12 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--third-text-color);
-  margin: 12px 0 4px 0;
+  margin-top: 12px;
 }
 .novaposhta-modal-subtitle {
-  margin: 12px 0 4px 0;
+  margin-top: 12px;
 }
+
 .novaposhta-modal-form {
   display: flex;
   flex-direction: column;
