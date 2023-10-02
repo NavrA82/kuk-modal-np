@@ -1,16 +1,4 @@
 /* ---------------GENERAL SETTINGS-------------------- */
-:root {
-  /* -----background color----------*/
-  --first-background-color: #2e2f42;
-  --second-background-color: #f4f4fd;
-  --third-background-color: #4d5ae5;
-  --fourth-background-color: #ffffff;
-  /* -------accent-color ----------*/
-  --accent-color: gray;
-  /* ---------- transition ------------- */
-  --transition-duration: 250ms;
-  --transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
-}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -33,7 +21,6 @@ ul {
 }
 
 /* ------------------UNIVERSAL CLASSES--------------------- */
-
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -41,12 +28,9 @@ ul {
   padding-left: 16px;
   padding-right: 16px;
 }
-
-/* -------------------- modal window and backdrop ----------------- */
-
-.novaposhta-modal-window {
+/*  */
+.novaposhta-form {
   min-width: 345px;
-
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -54,30 +38,30 @@ ul {
   margin: 0 auto;
 }
 
-.novaposhta-modal-form-general-wrapper {
+.novaposhta-form-general-wrapper {
   width: 100%;
 }
 
-.burger-switch-input {
+.novaposhta-switch-input {
   height: 0;
   width: 0;
   opacity: 0;
   border-radius: 35px;
 }
-.burger-switch-input:checked + .burger-switch-slider {
-  background-color: var(--accent-color);
+.novaposhta-switch-input:checked + .novaposhta-switch-slider {
+  background-color: gray;
 }
 
-.burger-switch-input:focus + .burger-switch-slider {
+.novaposhta-switch-input:focus + .novaposhta-switch-slider {
   box-shadow: 0 0 1px red;
 }
-.burger-switch-input:checked + .burger-switch-slider::before {
+.novaposhta-switch-input:checked + .novaposhta-switch-slider::before {
   transform: translateX(26px);
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
 }
 .switch-slider::before,
-.burger-switch-slider::before {
+.novaposhta-switch-slider::before {
   content: '';
   position: absolute;
   cursor: pointer;
@@ -91,11 +75,11 @@ ul {
   box-shadow: 7px 5px 15px 0px rgba(160, 158, 160, 0.4);
   transition: 0.4s;
 }
-.burger-switch-slider-name {
+.novaposhta-switch-slider-name {
   margin-top: 8px;
   margin-left: 8px;
 }
-.burger-switch-slider {
+.novaposhta-switch-slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -106,44 +90,43 @@ ul {
   height: 20px;
   border-radius: 60px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* винести в змінну */
   background-color: #cecdcd;
   transition: 0.4s;
 }
-.burger-switch {
+.novaposhta-switch {
   display: block;
   padding-top: -25px;
   position: relative;
   width: 46px;
   height: 20px;
 }
-.burger-switch-input:focus + .burger-switch-slider {
+.novaposhta-switch-input:focus + .novaposhta-switch-slider {
   box-shadow: 0 0 1px rgb(177, 177, 174);
 }
-.burger-switch-input:checked + .burger-switch-slider {
+.novaposhta-switch-input:checked + .novaposhta-switch-slider {
   background-color: red;
 }
-.novaposhta-modal-switch {
+.novaposhta-switch {
   margin-top: 4px;
   display: flex;
 }
-.novaposhta-modal-form-recipient {
+.novaposhta-form-recipient {
   width: 100%;
 
   row-gap: 8px;
 }
-.novaposhta-modal-shipment-parameters-general {
+.novaposhta-shipment-parameters-general {
   display: flex;
   column-gap: 4px;
 }
-.novaposhta-modal-shipment-parameters-wrap {
+.novaposhta-shipment-parameters-wrap {
   display: flex;
   border: 1px solid #c8c8c8;
   flex-direction: column;
   padding: 8px;
   row-gap: 8px;
 }
-.novaposhta-modal-shipment-parameters-general-sender {
+.novaposhta-shipment-parameters-general-sender {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -154,62 +137,61 @@ ul {
 .distance-between-checkbox-receiver {
   margin-right: 52px;
 }
-.novaposhta-modal-form-cub::before {
+.novaposhta-form-cub::before {
   content: '³';
   vertical-align: super;
   margin-right: 2px;
 }
 
-.novaposhta-modal-shipment-parameters {
+.novaposhta-shipment-parameters {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 8px;
 }
-.novaposhta-modal-form-label-value {
+.novaposhta-form-label-value {
   display: flex;
   align-items: flex-end;
 }
-.novaposhta-modal-title {
+.novaposhta-title {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--third-text-color);
   margin-top: 12px;
 }
-.novaposhta-modal-subtitle {
+.novaposhta-subtitle {
   margin-top: 12px;
 }
 
-.novaposhta-modal-form {
+.novaposhta-form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
 }
-.novaposhta-modal-form-label {
+.novaposhta-form-label {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.novaposhta-modal-form-label-other-parameters {
+.novaposhta-form-label-other-parameters {
   width: 140px;
 }
-.novaposhta-modal-form-label-value-weight {
+.novaposhta-form-label-value-weight {
   padding-top: 8px;
   padding-right: 8px;
 }
-.novaposhta-modal-form-label-name {
+.novaposhta-form-label-name {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  transition: border var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  transition: border 250ms;
+  transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
 }
-.novaposhta-modal-form-label-select {
+.novaposhta-form-label-select {
   outline: none;
   border: none;
   padding: 8px;
@@ -218,7 +200,7 @@ ul {
   text-align: center;
 }
 
-.novaposhta-modal-form-label-input {
+.novaposhta-form-label-input {
   outline: none;
   border: none;
   padding: 4px;
@@ -228,17 +210,17 @@ ul {
   font-weight: 700;
   text-align: center;
 }
-.novaposhta-modal-form-label-input-pay-color {
+.novaposhta-form-label-input-pay-color {
   color: red;
 }
 
-.novaposhta-modal-form-input-icon {
+.novaposhta-form-input {
   border: 1px solid #c8c8c8;
-  transition: border var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  transition: border 250ms;
+  transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
 }
 
-.novaposhta-modal-form-icon {
+/* .novaposhta-form-icon {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -248,21 +230,21 @@ ul {
   transform: translate(0, -50%);
   transition: fill var(--transition-duration), border var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-}
-.novaposhta-modal-form-label:hover .novaposhta-modal-form-label-input {
-  color: var(--accent-color);
-}
-.novaposhta-modal-form-input-icon:hover {
-  border-color: var(--accent-color);
-  fill: var(--accent-color);
-  color: var(--accent-color);
+} */
+/* .novaposhta-form-label:hover .novaposhta-form-label-input {
+  color: gray;
+} */
+.novaposhta-form-input:hover {
+  border-color: gray;
+  /* fill: gray; */
+  /* color: gray; */
 }
 /* ---------------------- modal window button --------------------------- */
 .novaposhta-btn-wrap {
   display: flex;
   flex-wrap: wrap;
 }
-.novaposhta-modal-btn-submit {
+.novaposhta-btn-submit {
   margin-right: auto;
   cursor: pointer;
   height: 50px;
@@ -275,14 +257,16 @@ ul {
   border: 1px solid;
   border-color: RGB(172, 172, 172);
   background-color: RGB(241, 241, 241);
+  transition: background-color 250ms, border-color 250ms, color 250ms;
+  transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
 }
-.novaposhta-modal-link:is(:hover, :focus),
-.novaposhta-modal-btn-submit:is(:hover, :focus) {
+.novaposhta-link:is(:hover, :focus),
+.novaposhta-btn-submit:is(:hover, :focus) {
   background-color: grey;
   border-color: #000;
   color: #fff;
 }
-.novaposhta-modal-link {
+.novaposhta-link {
   border: none;
   cursor: pointer;
   background-color: inherit;
@@ -291,37 +275,39 @@ ul {
   font-weight: bold;
   font-size: 12px;
   color: grey;
+  transition: background-color 250ms, color 250ms;
+  transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
 }
 
-.novaposhta-modal-title {
+.novaposhta-title {
   font-size: 16px;
   line-height: 1.5;
 }
 .wrap-button {
   margin: 12px 0 4px 0;
 }
-.novaposhta-modal-form-wrapper-receiver {
+.novaposhta-form-wrapper-receiver {
   display: flex;
   column-gap: 12px;
 }
-.novaposhta-modal-form-label-department {
+.novaposhta-form-label-department {
   width: 65%;
 }
 
-.novaposhta-modal-form-label-locality {
+.novaposhta-form-label-locality {
   width: 35%;
 }
-.novaposhta-modal-form-label-checkbox {
+.novaposhta-form-label-checkbox {
   display: flex;
   flex-wrap: wrap;
 }
 /*!##################### 480px-.... ########################### */
 @media screen and (min-width: 1280px) {
-  .novaposhta-modal-form-wrapper {
+  .novaposhta-form-wrapper {
     display: flex;
     column-gap: 48px;
   }
-  .novaposhta-modal-form-recipient,
+  .novaposhta-form-recipient,
   .wrap-button {
     width: 70%;
   }
