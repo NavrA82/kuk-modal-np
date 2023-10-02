@@ -28,7 +28,7 @@ ul {
   padding-left: 16px;
   padding-right: 16px;
 }
-/*  */
+
 .novaposhta-form {
   min-width: 345px;
   background: #fcfcfc;
@@ -41,7 +41,27 @@ ul {
 .novaposhta-form-general-wrapper {
   width: 100%;
 }
-
+.novaposhta-shipment-parameters-general-wrap {
+  display: flex;
+  column-gap: 24px;
+}
+.novaposhta-place-receipt-wrap {
+  display: flex;
+  column-gap: 52px;
+  margin-top: 12px;
+}
+.novaposhta-payer-for-delivery-wrap {
+  display: flex;
+  column-gap: 60px;
+}
+.novaposhta-switch-wrap {
+  display: flex;
+}
+.novaposhta-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .novaposhta-switch-input {
   height: 0;
   width: 0;
@@ -117,7 +137,12 @@ ul {
 }
 .novaposhta-shipment-parameters-general {
   display: flex;
-  column-gap: 4px;
+  gap: 4px;
+}
+.novaposhta-shipment-parameters-wrap-lhct {
+  display: flex;
+  column-gap: 16px;
+  row-gap: 4px;
 }
 .novaposhta-shipment-parameters-wrap {
   display: flex;
@@ -134,9 +159,9 @@ ul {
 .distance-between-checkbox {
   margin-right: 12px;
 }
-.distance-between-checkbox-receiver {
+/* .distance-between-checkbox-receiver {
   margin-right: 52px;
-}
+} */
 .novaposhta-form-cub::before {
   content: '³';
   vertical-align: super;
@@ -223,7 +248,8 @@ ul {
 .novaposhta-form-input:hover {
   border-color: gray;
 }
-/* ---------------------- modal window button --------------------------- */
+
+/* ---------------- button ---------------------- */
 .novaposhta-btn-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -244,7 +270,7 @@ ul {
   transition: background-color 250ms, border-color 250ms, color 250ms;
   transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
 }
-/* .novaposhta-link:is(:hover, :focus), */
+
 .novaposhta-btn-submit:is(:hover, :focus) {
   background-color: grey;
   border-color: #000;
@@ -334,4 +360,33 @@ ul {
   .wrap-button {
     width: 70%;
   }
+  .novaposhta-shipment-parameters-general-wrap {
+    flex-wrap: nowrap;
+  }
+}
+
+/*!##################### 480px-.... ########################### */
+@media screen and (max-width: 376px) {
+  .novaposhta-shipment-parameters-general-wrap,
+  .novaposhta-shipment-parameters-general,
+  .novaposhta-btn-wrap,
+  .novaposhta-form-wrapper-receiver {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    justify-content: center;
+  }
+  .novaposhta-title-wrap,
+  .novaposhta-payer-for-delivery-wrap,
+  .novaposhta-switch-wrap,
+  .novaposhta-place-receipt-wrap {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .novaposhta-btn-submit {
+    margin: 0;
+  }
+  .novaposhta-form-label {
+    width: 100%;
+  }
+  /* .novaposhta-form-label-other-parameters */
 }

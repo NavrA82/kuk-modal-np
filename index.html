@@ -22,9 +22,10 @@
       <!-- ===================== FORM ============================================ -->
       <form class="novaposhta-form">
         <div class="novaposhta-form-wrapper">
-          <!-- ************************** shipping options****************************** -->
+          <!-- ************************** Shipping options****************************** -->
           <div class="novaposhta-form-general-wrapper">
-            <div style="display: flex; align-items: center; gap: 8px">
+            <!-- ---------------- Main shipping options -------------  -->
+            <div class="novaposhta-title-wrap">
               <p class="novaposhta-title">Параметри відправлення</p>
               <div>
                 <label
@@ -44,7 +45,7 @@
                 </label>
               </div>
             </div>
-            <div style="display: flex; column-gap: 24px">
+            <div class="novaposhta-shipment-parameters-general-wrap">
               <div>
                 <div class="novaposhta-shipment-parameters-general">
                   <label class="novaposhta-form-label">
@@ -74,7 +75,7 @@
                           <span class="novaposhta-form-input">
                             <input
                               class="novaposhta-form-label-input"
-                              type="text"
+                              type="number"
                             />
                           </span>
                         </div>
@@ -82,7 +83,7 @@
                     </div>
 
                     <div class="novaposhta-shipment-parameters-wrap">
-                      <div style="display: flex; column-gap: 16px">
+                      <div class="novaposhta-shipment-parameters-wrap-lhct">
                         <label class="novaposhta-form-label">
                           <span class="novaposhta-form-label-name"
                             >Довжина, см</span
@@ -90,7 +91,7 @@
                           <span class="novaposhta-form-input">
                             <input
                               class="novaposhta-form-label-input"
-                              type="text"
+                              type="number"
                             />
                           </span>
                         </label>
@@ -102,7 +103,7 @@
                           <span class="novaposhta-form-input">
                             <input
                               class="novaposhta-form-label-input"
-                              type="text"
+                              type="number"
                             />
                           </span>
                         </label>
@@ -114,7 +115,7 @@
                           <span class="novaposhta-form-input">
                             <input
                               class="novaposhta-form-label-input"
-                              type="text"
+                              type="number"
                             />
                           </span>
                         </label>
@@ -148,7 +149,7 @@
                             <span class="novaposhta-form-input">
                               <input
                                 class="novaposhta-form-label-input"
-                                type="text"
+                                type="number"
                               />
                             </span>
                           </label>
@@ -158,7 +159,8 @@
                   </div>
                 </div>
               </div>
-              <!-- -------------------- other shipping parameters--------------------------  -->
+              <!-- ---------------- /Main shipping options -------------  -->
+              <!-- ------------ Additional shipping options ------------  -->
               <div style="display: flex; row-gap: 16px; flex-direction: column">
                 <label
                   class="novaposhta-form-label novaposhta-form-label-other-parameters"
@@ -167,7 +169,7 @@
                     >Оціночна вартість, грн</span
                   >
                   <span class="novaposhta-form-input">
-                    <input class="novaposhta-form-label-input" type="text" />
+                    <input class="novaposhta-form-label-input" type="number" />
                   </span>
                 </label>
 
@@ -176,7 +178,7 @@
                 >
                   <span class="novaposhta-form-label-name">Об'ємна вага</span>
                   <span class="novaposhta-form-input">
-                    <input class="novaposhta-form-label-input" type="text" />
+                    <input class="novaposhta-form-label-input" type="number" />
                   </span>
                 </label>
 
@@ -188,16 +190,19 @@
                       >Кількість місць, шт</span
                     >
                     <span class="novaposhta-form-input">
-                      <input class="novaposhta-form-label-input" type="text" />
+                      <input
+                        class="novaposhta-form-label-input"
+                        type="number"
+                      />
                     </span>
                   </label>
                 </div>
               </div>
             </div>
-            <!-- -------------------- /other shipping parameters--------------------------  -->
-            <!-- ********************** /shipping options****************************** -->
+            <!-- ------------ /Additional shipping options ------------  -->
 
-            <div style="display: flex; gap: 60px">
+            <!-- ------------------- Payer for delivery ------------------- -->
+            <div class="novaposhta-payer-for-delivery-wrap">
               <div>
                 <p class="novaposhta-title">Платник за доставку</p>
                 <div>
@@ -246,7 +251,8 @@
               </div>
             </div>
           </div>
-
+          <!-- ------------------- /Payer for delivery ------------------- --
+          <!-- ********************** /Shipping options **************************** -->
           <div class="novaposhta-form-general-wrapper">
             <p class="novaposhta-title">Відправник</p>
             <div class="novaposhta-shipment-parameters-general-sender">
@@ -369,7 +375,7 @@
                 </span>
               </label>
             </div>
-            <div style="margin-top: 12px">
+            <div class="novaposhta-place-receipt-wrap">
               <label class="distance-between-checkbox-receiver">
                 <input
                   type="radio"
@@ -434,7 +440,7 @@
             </div>
           </div>
           <p class="novaposhta-title">Додаткові послуги</p>
-          <div style="display: flex">
+          <div class="novaposhta-switch-wrap">
             <div class="novaposhta-switch">
               <label class="novaposhta-switch">
                 <input type="checkbox" class="novaposhta-switch-input" />
@@ -443,7 +449,7 @@
             </div>
             <span class="novaposhta-switch-slider-name">Грошовий переказ</span>
           </div>
-          <div style="display: flex; column-gap: 60px">
+          <div class="novaposhta-payer-for-delivery-wrap">
             <label
               class="novaposhta-form-label novaposhta-form-label-cost novaposhta-form-label-other-parameters"
             >
@@ -451,7 +457,7 @@
               <span class="novaposhta-form-input">
                 <input
                   class="novaposhta-form-label-input novaposhta-form-label-input-pay-color"
-                  type="text"
+                  type="number"
                 />
               </span>
             </label>
