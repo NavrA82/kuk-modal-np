@@ -28,16 +28,25 @@ ul {
   padding-left: 16px;
   padding-right: 16px;
 }
-
+.novaposhta-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-top: 12px;
+}
+.novaposhta-subtitle {
+  margin-top: 12px;
+}
+/* ================== FORM ====================== */
 .novaposhta-form {
-  min-width: 345px;
+  min-width: 320px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 0px 8px;
+  padding: 0 8px 4px 8px;
   margin: 0 auto;
 }
-
 .novaposhta-form-general-wrapper {
   width: 100%;
 }
@@ -62,77 +71,8 @@ ul {
   align-items: center;
   gap: 8px;
 }
-.novaposhta-switch-input {
-  height: 0;
-  width: 0;
-  opacity: 0;
-  border-radius: 35px;
-}
-.novaposhta-switch-input:checked + .novaposhta-switch-slider {
-  background-color: gray;
-}
-
-.novaposhta-switch-input:focus + .novaposhta-switch-slider {
-  box-shadow: 0 0 1px red;
-}
-.novaposhta-switch-input:checked + .novaposhta-switch-slider::before {
-  transform: translateX(26px);
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-}
-.switch-slider::before,
-.novaposhta-switch-slider::before {
-  content: '';
-  position: absolute;
-  cursor: pointer;
-  right: 0.6px;
-  left: 0.6px;
-  bottom: 0.6px;
-  height: 18.8px;
-  width: 18.8px;
-  border-radius: 50%;
-  background-color: rgb(243, 243, 243);
-  box-shadow: 7px 5px 15px 0px rgba(160, 158, 160, 0.4);
-  transition: 0.4s;
-}
-.novaposhta-switch-slider-name {
-  margin-top: 8px;
-  margin-left: 8px;
-}
-.novaposhta-switch-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 46px;
-  height: 20px;
-  border-radius: 60px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #cecdcd;
-  transition: 0.4s;
-}
-.novaposhta-switch {
-  display: block;
-  padding-top: -25px;
-  position: relative;
-  width: 46px;
-  height: 20px;
-}
-.novaposhta-switch-input:focus + .novaposhta-switch-slider {
-  box-shadow: 0 0 1px rgb(177, 177, 174);
-}
-.novaposhta-switch-input:checked + .novaposhta-switch-slider {
-  background-color: red;
-}
-.novaposhta-switch {
-  margin-top: 4px;
-  display: flex;
-}
 .novaposhta-form-recipient {
   width: 100%;
-
   row-gap: 8px;
 }
 .novaposhta-shipment-parameters-general {
@@ -151,6 +91,9 @@ ul {
   padding: 8px;
   row-gap: 8px;
 }
+.novaposhta-form-payment-for-delivery {
+  padding-top: 12px;
+}
 .novaposhta-shipment-parameters-general-sender {
   display: flex;
   flex-direction: column;
@@ -159,9 +102,7 @@ ul {
 .distance-between-checkbox {
   margin-right: 12px;
 }
-/* .distance-between-checkbox-receiver {
-  margin-right: 52px;
-} */
+
 .novaposhta-form-cub::before {
   content: '³';
   vertical-align: super;
@@ -178,28 +119,33 @@ ul {
   display: flex;
   align-items: flex-end;
 }
-.novaposhta-title {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  margin-top: 12px;
-}
-.novaposhta-subtitle {
-  margin-top: 12px;
-}
 
-.novaposhta-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
 .novaposhta-form-label {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+.novaposhta-form-label-other {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 4px;
+}
+.novaposhta-form-label-total {
+  display: flex;
+  column-gap: 4px;
+  justify-content: end;
+  font-size: 28px;
+}
+.novaposhta-form-label-total-span {
+  font-weight: 700;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 56px;
+}
+
 .novaposhta-form-label-other-parameters {
   width: 140px;
 }
@@ -248,7 +194,87 @@ ul {
 .novaposhta-form-input:hover {
   border-color: gray;
 }
+.novaposhta-form-wrapper-receiver {
+  display: flex;
+  column-gap: 12px;
+}
+.novaposhta-form-label-department {
+  width: 65%;
+}
 
+.novaposhta-form-label-locality {
+  width: 35%;
+}
+.novaposhta-form-label-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* ****************** switch-slider **************** */
+.novaposhta-switch-input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  border-radius: 35px;
+}
+.novaposhta-switch-input:checked + .novaposhta-switch-slider {
+  background-color: gray;
+}
+.novaposhta-switch-input:focus + .novaposhta-switch-slider {
+  box-shadow: 0 0 1px red;
+}
+.novaposhta-switch-input:checked + .novaposhta-switch-slider::before {
+  transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+}
+.switch-slider::before,
+.novaposhta-switch-slider::before {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  right: 0.6px;
+  left: 0.6px;
+  bottom: 0.6px;
+  height: 18.8px;
+  width: 18.8px;
+  border-radius: 50%;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 7px 5px 15px 0px rgba(160, 158, 160, 0.4);
+  transition: 0.4s;
+}
+.novaposhta-switch-slider-name {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.novaposhta-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 46px;
+  height: 20px;
+  border-radius: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #cecdcd;
+  transition: 0.4s;
+}
+.novaposhta-switch {
+  display: block;
+  padding-top: -25px;
+  position: relative;
+  width: 46px;
+  height: 20px;
+  margin-top: 4px;
+  display: flex;
+}
+.novaposhta-switch-input:focus + .novaposhta-switch-slider {
+  box-shadow: 0 0 1px rgb(177, 177, 174);
+}
+.novaposhta-switch-input:checked + .novaposhta-switch-slider {
+  background-color: red;
+}
 /* ---------------- button ---------------------- */
 .novaposhta-btn-wrap {
   display: flex;
@@ -280,8 +306,7 @@ ul {
   border: none;
   cursor: pointer;
   background-color: inherit;
-  font-family: Arial;
-  font-weight: bold;
+  text-transform: uppercase;
   font-size: 12px;
   color: grey;
   transition: background-color 250ms, color 250ms;
@@ -319,12 +344,9 @@ ul {
 }
 
 .novaposhta-link {
-  padding: 4px 5px;
+  padding: 5px 2px 3px 2px;
   overflow: hidden;
   position: relative;
-}
-.novaposhta-link {
-  padding: 2px 2px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -335,22 +357,8 @@ ul {
 .wrap-button {
   margin: 12px 0 4px 0;
 }
-.novaposhta-form-wrapper-receiver {
-  display: flex;
-  column-gap: 12px;
-}
-.novaposhta-form-label-department {
-  width: 65%;
-}
 
-.novaposhta-form-label-locality {
-  width: 35%;
-}
-.novaposhta-form-label-checkbox {
-  display: flex;
-  flex-wrap: wrap;
-}
-/*!##################### 480px-.... ########################### */
+/*!##################### 1280px-.... ########################### */
 @media screen and (min-width: 1280px) {
   .novaposhta-form-wrapper {
     display: flex;
@@ -365,7 +373,7 @@ ul {
   }
 }
 
-/*!##################### 480px-.... ########################### */
+/*!##################### .... -376px ########################### */
 @media screen and (max-width: 376px) {
   .novaposhta-shipment-parameters-general-wrap,
   .novaposhta-shipment-parameters-general,
@@ -388,5 +396,4 @@ ul {
   .novaposhta-form-label {
     width: 100%;
   }
-  /* .novaposhta-form-label-other-parameters */
 }
